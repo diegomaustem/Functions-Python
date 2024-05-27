@@ -16,10 +16,8 @@ def validaEntradas(entrada, tipo_entrada):
             return valid
         except:
             print('Formato de altura não aceitável!')
-    
     else:
         print('Tipo não reconhecido!')
-
 
 sexo = input('Digite o seu sexo: ').lower()
 entrada_validada = validaEntradas(sexo, 'sexo')
@@ -36,13 +34,11 @@ while entrada_validada != True:
 altura = input('Digite sua altura: ')
 entrada_validada = validaEntradas(altura, 'altura')
 while entrada_validada != True:
-    altura = input('Digite seu peso: ')
+    altura = input('Digite seu altura: ')
     entrada_validada = validaEntradas(altura, 'altura')
-
 
 def calculaIMC(sexo, peso, altura):
     calculo_imc = (float(peso)/ (float(altura) * float(altura)))
-
     if(sexo == 'm'):
         if(calculo_imc < 20,7):
             print('Abaixo do peso')
