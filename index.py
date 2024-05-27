@@ -17,7 +17,7 @@ def validaEntradas(entrada, tipo_entrada):
         except:
             print('Formato de altura não aceitável!')
     else:
-        print('Tipo não reconhecido!')
+        print('Opção inválida! ')
 
 sexo = input('Digite o seu sexo: ').lower()
 entrada_validada = validaEntradas(sexo, 'sexo')
@@ -51,7 +51,7 @@ def calculaIMC(sexo, peso, altura):
         elif(calculo_imc > 31,1):
             print('Obeso')
         else: 
-            print('Opção não corresponde: ')
+            print('Opção inválida! ')
     elif(sexo == 'f'):
         if(calculo_imc < 19,1):
             print('Abaixo do peso')
@@ -64,8 +64,8 @@ def calculaIMC(sexo, peso, altura):
         elif(calculo_imc > 32,3):
             print('Obesa')
         else: 
-            print('Opção não corresponde: ')
+            print('Opção inválida! ')
     else:
-        print('Opção não corresponde! Tente novamente: ')
+        print('Opção inválida! ')
 
 calculaIMC(sexo, peso, altura)
